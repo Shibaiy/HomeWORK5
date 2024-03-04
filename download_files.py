@@ -7,6 +7,8 @@ from selenium import webdriver
 from selenium.webdriver.chrome.service import Service
 from webdriver_manager.chrome import ChromeDriverManager
 
+os.mkdir('tmp')
+
 browser.open("https://github.com/Shibaiy/HomeWORK/blob/main/Files/Xlsx-1.xlsx")
 download_url = selene.browser.element('[data-testid="raw-button"]').get(selene.query.attribute("href"))
 content = requests.get(url=download_url).content

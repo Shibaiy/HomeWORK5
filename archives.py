@@ -6,9 +6,8 @@ from pathlib import Path
 
 list_files=[]
 directory = os.getcwd() + str(Path('/tmp'))
-print(list_files)
 for i in os.listdir(directory):
-    list_files.append(directory + str(Path('/')) + i)
+    list_files.append(str(Path('.')) + str(Path('/tmp/')) + str(Path('/'))  + i)
 print(list_files)
 
 archive = "test_archive.zip"
