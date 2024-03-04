@@ -33,4 +33,3 @@ browser.config.driver = driver
 browser.open("https://github.com/Shibaiy/HomeWORK/blob/main/Files/PDF-3.pdf")
 browser.element('[data-testid="download-raw-button"]').click()
 time.sleep(3)
-a

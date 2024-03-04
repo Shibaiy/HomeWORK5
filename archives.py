@@ -14,4 +14,3 @@ archive = "test_archive.zip"
 with zipfile.ZipFile(archive,"w") as test_archive:
     for file in list_files:
         test_archive.write(file)
-a
