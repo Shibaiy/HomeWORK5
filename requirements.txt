@@ -1,3 +1,8 @@
 requests~=2.31.0
 selene~=2.0.0rc8
 selenium~=4.18.1
+webdriver-manager
+pandas
+pytest
+openpyxl
+pypdf
