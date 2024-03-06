@@ -1,15 +1,15 @@
 import os
 import zipfile
 from pathlib import Path
+import variables as v
 
 
 list_files=[]
-directory = os.getcwd() + str(Path('/tmp'))
-for i in os.listdir(directory):
-    list_files.append(str(Path('.')) + str(Path('/tmp/')) + str(Path('/'))  + i)
-print(list_files)
+for i in os.listdir(v.download_default_directory):
+    list_files.append(v.default_directory + i)
 
-archive = str(Path('./tmp/test_archive.zip'))
-with zipfile.ZipFile(archive,"w") as test_archive:
+
+
+with zipfile.ZipFile(v.archive,"w") as test_archive:
     for file in list_files:
         test_archive.write(file)
