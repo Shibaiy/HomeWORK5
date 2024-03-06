@@ -1,8 +1,9 @@
-from pathlib import Path
 import pandas as pd
 from zipfile import ZipFile
 from pypdf import PdfReader
 import variables as v
+
+
 def test_csv():
     with ZipFile(v.archive) as zip_file:
         f = pd.read_csv(zip_file.open(v.file_directory + v.file_2))
@@ -12,7 +13,7 @@ def test_csv():
 
 def test_xlsx():
     with ZipFile(v.archive) as zip_file:
-        f = pd.read_excel(zip_file.open(v.file_directory+ v.file_1))
+        f = pd.read_excel(zip_file.open(v.file_directory + v.file_1))
         id_list = f['Id'].to_list()
     assert v.user_id in id_list
 
